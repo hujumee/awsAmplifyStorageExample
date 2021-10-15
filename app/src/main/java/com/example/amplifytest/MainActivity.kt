@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun downloadFile() {
-        val file = File("${applicationContext.filesDir}/download")
+        val file = File("${applicationContext.filesDir}/download.txt")
         val options = StorageDownloadFileOptions.defaultInstance()
         Amplify.Storage.downloadFile("ExampleKey", file, options,
             { Log.i("MyAmplifyApp", "Fraction completed: ${it.fractionCompleted}") },
